@@ -1,0 +1,36 @@
+{
+  "name": "postgres-example",
+  "version": "1.0.0",
+  "description": "Server para consultar una base de datos postgres",
+  "author": "andresfelipe9619",
+  "repository": "andresfelipe9619/postgres-example",
+  "bugs": {
+    "url": "https://github.com/andresfelipe9619/postgres-example/issues"
+  },
+  "homepage": "https://github.com/andresfelipe9619/postgres-example",
+  "license": "MIT",
+  "main": "./app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "connect-flash": "^0.1.1",
+    "consolidate": "^0.14.5",
+    "cookie-parser": "^1.4.3",
+    "dust": "^0.3.0",
+    "dustjs-helpers": "^1.7.3",
+    "dustjs-linkedin": "^2.7.5",
+    "express": "4.15.1",
+    "express-session": "^1.15.2",
+    "flash": "^1.1.0",
+    "morgan": "^1.8.1",
+    "node": "0.0.0",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7",
+    "pg": "6.1.0",
+    "pg-pool": "1.7.0",
+    "session": "^0.1.0",
+    "supervisor": "0.11.0"
+  }
+}

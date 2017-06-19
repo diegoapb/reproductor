@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Usuarios</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/bootstrap.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <br />
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addModal">Add User</button>
+        <br />
+        <br />
+        <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#deleteModal">Delete User</button>
+        <br />
+        <div class "well">
+            <h2>Users</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                {#usuarios}
+                <tbody>
+                    <tr>
+                        <td>{nombre_cancion}</td>
+                        <td>{duracion}</td>
+                        <td>{ruta}</td>
+                    </tr>
+                </tbody>
+                {/usuarios}
+            </table>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form method="post" action="/user/add">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+	        				</button>
+                            <h4 class="modal-title" id="myModalLabel">Add User</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div clss="form-group">
+                                <label>Username</label>
+                                <input type="text" class="form-control" name="user" />
+                            </div>
+                            <div clss="form-group">
+                                <label>Password</label>
+                                <input type="text" class="form-control" name="password" />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary" value="save" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form method="post" action="/user/delete">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+	        				</button>
+                            <h4 class="modal-title" id="myModalLabel2">Delete User</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Id_Usuario</label>
+                                <input type="text" class="form-control" name="id_usuario" />
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary" value="delete" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="/public/js/bootstrap.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

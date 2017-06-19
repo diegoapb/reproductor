@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/barra_style.css" />
+    <style>
+        body {
+            font-family: "Arial", sans-xerif;
+            font-size: 13px;
+            line-height: 1.5cm;
+            color: #fff;
+            background: url(../img/images.png);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="barra-lateral">
+        <div id="logo-menu">
+        </div>
+
+        <div class="contenedor-logos-primero">
+            <div class="logo">
+            </div>
+            <p class="title-menu">Home</p>
+        </div>
+
+        <div class="contenedor-logos">
+            <div class="logo">
+            </div>
+            <p class="title-menu">Canciones</p>
+        </div>
+
+        <div class="contenedor-logos">
+            <div class="logo">
+            </div>
+            <p class="title-menu">Artsitas</p>
+        </div>
+    </div>
+
+    <div class="container" id="cuerpo">
+        <div class="col-ms">
+            <div class="row">
+                <h1>WHAT DO YOU WANT TO LISTEN?</h1>
+            </div>
+            <form action="/home/search" method="post">
+                <div class="input-group margin-bottom-sm">
+                    <button type="submit" class="btn btn-info">
+                    <span class="fa fa-search fa-fw"></span> Search
+                    </button>
+                    <input name="something" class="form-control" type="text" placeholder="Type Artist/Song/Genre">
+                </div>
+            </form>
+        </div>
+        <div class="row">
+
+
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
