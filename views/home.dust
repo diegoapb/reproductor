@@ -20,48 +20,37 @@
 </head>
 
 <body>
-
-    <div id="barra-lateral">
-        <div id="logo-menu">
-        </div>
-
-        <div class="contenedor-logos-primero">
-            <div class="logo">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
             </div>
-            <p class="title-menu">Home</p>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Player</a></li>
+                <li><a href="#">Songs</a></li>
+                <li><a href="#">Artists</a></li>
+                <li><a href="#">Albums</a></li>
+                <li><a href="#">Playlists</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
         </div>
-
-        <div class="contenedor-logos">
-            <div class="logo">
-            </div>
-            <p class="title-menu">Canciones</p>
-        </div>
-
-        <div class="contenedor-logos">
-            <div class="logo">
-            </div>
-            <p class="title-menu">Artsitas</p>
-        </div>
-    </div>
-
+    </nav>
     <div class="container" id="cuerpo">
-        <div class="col-ms">
-            <div class="row">
-                <h1>WHAT DO YOU WANT TO LISTEN?</h1>
-            </div>
-            <form action="/home/search" method="post">
-                <div class="input-group margin-bottom-sm">
+        <h1>WHAT DO YOU WANT TO LISTEN?</h1>
+        <div class="row">
+            <form class="form-inline" action="/home/search" method="post">
+                <div class="input-group">
                     <button type="submit" class="btn btn-info">
                     <span class="fa fa-search fa-fw"></span> Search
                     </button>
                     <input name="something" class="form-control" type="text" placeholder="Type Artist/Song/Genre">
                 </div>
             </form>
-        </div>
-        <div class="row">
-
-
-
         </div>
     </div>
 
